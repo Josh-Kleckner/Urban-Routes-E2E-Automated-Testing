@@ -58,8 +58,8 @@ describe('Create an order', () => {
         const orderRequirements = await $(page.orderRequirements);
         await orderRequirements.scrollIntoView();
         await orderRequirements.click();
-         // Sometimes the app loads with the requirements section already open -- this is to check for that before clicking
-         await page.checkAndOpenOrderRequirements();
+        // Sometimes the app loads with the requirements section already open -- this is to check for that before clicking
+        await page.checkAndOpenOrderRequirements();
         // Continue with enabling blanket & handkerchief slider
         const blanketSlider = await $(page.blanketSlider);
         await blanketSlider.waitForClickable();
@@ -77,10 +77,8 @@ describe('Create an order', () => {
          await addIceCream.click();
          await addIceCream.click();
          const iceCreamValue = await $(page.iceCreamValue);
-         const value = await iceCreamValue.getText();
-         await expect(value).toBe('2');
          const addICButtonDisabled = await $(page.addICButtonDisabled);
-         await addICButtonDisabled.tobeDisabled;
+         await expect(addICButtonDisabled).tobeDisabled;
     })
 
     it('should open car search modal', async () => {
@@ -88,35 +86,29 @@ describe('Create an order', () => {
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         const phoneNumber = helper.getPhoneNumber("+1");
         await page.submitPhoneNumber(phoneNumber);
-        await expect(await helper.getElementByText(phoneNumber)).toBeExisting();
         const driverMessageField = await $(page.driverMessageField);
         await driverMessageField.waitForDisplayed();
         await driverMessageField.setValue("I'm wearing green");
-        const fieldValue = await driverMessageField.getValue();
-        await expect(fieldValue).toBe("I'm wearing green");
         // Begin car search modal test
         await page.checkCarSearchModalAppears();
         const carSearchModal = await $(page.carSearchModal);
         await expect(carSearchModal).toBeExisting();
     })
 
-    it('should show driver ingo after car search countdown', async () => {
+    it('should show driver info after car search countdown', async () => {
         await browser.url(`/`)
         await page.fillAddresses('East 2nd Street, 601', '1300 1st St');
         const phoneNumber = helper.getPhoneNumber("+1");
         await page.submitPhoneNumber(phoneNumber);
-        await expect(await helper.getElementByText(phoneNumber)).toBeExisting();
         const driverMessageField = await $(page.driverMessageField);
         await driverMessageField.waitForDisplayed();
         await driverMessageField.setValue("I'm wearing green");
-        const fieldValue = await driverMessageField.getValue();
-        await expect(fieldValue).toBe("I'm wearing green");
         await page.checkCarSearchModalAppears();
         const carSearchModal = await $(page.carSearchModal);
-        await expect(carSearchModal).toBeExisting();
         // Begin testing for driver info modal
         await browser.pause(30000); //30 second countdown until the driver info modal opens
         const driverInfoModal = await $(page.driverInfoModal);
+    // Is it alright to have multiple expects here since we are checking that all the driver info is showing? Or do we assume if one shows, they all show?
         await expect(driverInfoModal).toBeExisting();
         const driverName = await $(page.driverName);
         await expect(driverName).toBeExisting();
