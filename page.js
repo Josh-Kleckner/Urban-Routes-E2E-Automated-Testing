@@ -23,7 +23,6 @@ module.exports = {
     blanketSlider: '.switch',
     blanketSliderEnabled: 'div.r-sw-container input.switch-input',
     addIceCreamButton: '.counter-plus',
-    iceCreamValue: '.counter-value',
     addICButtonDisabled: '.counter-plus.disabled',
     carSearchButton: '.smart-button',
     orderDetailsButton: 'button.order-button=Details',

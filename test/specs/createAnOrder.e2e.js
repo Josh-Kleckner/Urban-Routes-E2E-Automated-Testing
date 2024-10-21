@@ -76,7 +76,6 @@ describe('Create an order', () => {
          const addIceCream = await $(page.addIceCreamButton);
          await addIceCream.click();
          await addIceCream.click();
-         const iceCreamValue = await $(page.iceCreamValue);
          const addICButtonDisabled = await $(page.addICButtonDisabled);
          await expect(addICButtonDisabled).tobeDisabled;
     })
@@ -104,7 +103,6 @@ describe('Create an order', () => {
         await driverMessageField.waitForDisplayed();
         await driverMessageField.setValue("I'm wearing green");
         await page.checkCarSearchModalAppears();
-        const carSearchModal = await $(page.carSearchModal);
         // Begin testing for driver info modal
         await browser.pause(30000); //30 second countdown until the driver info modal opens
         const driverInfoModal = await $(page.driverInfoModal);
