@@ -65,7 +65,6 @@ describe('Create an order', () => {
         await blanketSlider.waitForClickable();
         await blanketSlider.click();
         const blanketSliderEnabled = await $(page.blanketSliderEnabled)
-        const isEnabled = await blanketSlider.isSelected();
         await expect(blanketSliderEnabled).toBeChecked();
     })
 
@@ -118,7 +117,6 @@ describe('Create an order', () => {
         // Begin testing for driver info modal
         await browser.pause(30000); //30 second countdown until the driver info modal opens
         const driverInfoModal = await $(page.driverInfoModal);
-        //await driverInfoModal.waitForDisplayed();
         await expect(driverInfoModal).toBeExisting();
         const driverName = await $(page.driverName);
         await expect(driverName).toBeExisting();
