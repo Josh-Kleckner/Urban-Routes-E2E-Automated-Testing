@@ -96,7 +96,7 @@ describe('Create an order', () => {
         const fieldValue = await driverMessageField.getValue();
         await expect(fieldValue).toBe("I'm wearing green");
         // Begin car search modal test
-        await page.carSearchModalAppears();
+        await page.checkCarSearchModalAppears();
         const carSearchModal = await $(page.carSearchModal);
         await expect(carSearchModal).toBeExisting();
     })
@@ -112,7 +112,7 @@ describe('Create an order', () => {
         await driverMessageField.setValue("I'm wearing green");
         const fieldValue = await driverMessageField.getValue();
         await expect(fieldValue).toBe("I'm wearing green");
-        await page.carSearchModalAppears();
+        await page.checkCarSearchModalAppears();
         const carSearchModal = await $(page.carSearchModal);
         await expect(carSearchModal).toBeExisting();
         // Begin testing for driver info modal

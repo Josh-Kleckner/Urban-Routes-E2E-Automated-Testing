@@ -12,6 +12,15 @@ Technology Used:
     Mocha
     Node.js 
 
+Techniques Used:
+    Network Request Interceptor
+    Page Object Model - used to capture and assign selectors
+    Element visibility tests - i.e. .waitForDisplayed();
+    Browser Pauses
+    Element Interaction - clicking and adding text inputs
+    Randomzied data generation - phone number creation
+    Module Exports/Imports 
+
 
 Running Tests:
     1. Clone the repository: open your terminal and create a directory for the repo

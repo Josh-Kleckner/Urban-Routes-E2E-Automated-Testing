@@ -123,7 +123,7 @@ module.exports = {
         }
     },
 
-    carSearchModalAppears: async function(){
+    checkCarSearchModalAppears: async function(){
         const carSearchButton = await $(this.carSearchButton);
         await expect(carSearchButton).toBeDisplayed();
         await carSearchButton.click();
