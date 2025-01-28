@@ -1,35 +1,37 @@
-# Sprint 8 Project
+#Urban Routes End-to-End Automated testing#
 
-Josh Kleckner
-Sprint 8 Project
+## Description
+This project focuses on testing the core functionality of the UrbanRoutes app by developing and executing automated tests using WebDriverIO and Mocha. It highlights the use of modern testing tools and techniques to ensure the app delivers a smooth and reliable user experience.
 
-Project Description: The goal of this project was to write automated tests to check the functionality of the UrbanRoutes app.
+## Key Technologies
+- **Git Bash** for version control  
+- **VS Code** as the development environment  
+- **WebDriverIO** and **Mocha** for test automation  
+- **Node.js** for dependency and test management  
 
-Technology Used:
-    Git Bash
-    VS Code
-    WebDriverIO
-    Mocha
-    Node.js 
+## Techniques Used
+- **Page Object Model** for organized and reusable selectors  
+- **Network Request Interceptor** to monitor and modify API calls  
+- **Element visibility tests** using `.waitForDisplayed()`  
+- **Dynamic data generation** for creating randomized phone numbers  
+- **Modular structure** with exports and imports for cleaner code organization  
+- **Interactive element handling** for clicks, inputs, and browser pauses
 
-Techniques Used:
-    Network Request Interceptor
-    Page Object Model - used to capture and assign selectors
-    Element visibility tests - i.e. .waitForDisplayed();
-    Browser Pauses
-    Element Interaction - clicking and adding text inputs
-    Randomzied data generation - phone number creation
-    Module Exports/Imports 
+## How to Run the Tests
+1. Clone the repository to your local system:  
+   ```bash
+git clone <repository-url>
+2. Navigate to the project directory:
+   ```bash
+cd ./hm08-qa-us
+3. Install the required dependencies:
+   ```bash
+npm install webdriverio --save-dev  
+npm install mocha --save-dev  
+4. Replace the baseURL in the wdio.config.js file with a current server URL from TripleTen.
+5. Run the test suite:
+   ```bash
+npm run wdio
 
-
-Running Tests:
-    1. Clone the repository: open your terminal and create a directory for the repo
-        run the command git clone <repository-url>
-    2. Navigate to the project directory
-        cd ./hm08-qa-us
-    3. Using Node.js, install WebDriverIO & Mocha
-        npm install webdriverio --save-dev
-        npm install mocha --save-dev 
-    4. Use a current server URL from TripleTen and replace as the baseURL in the wdio.config.js file
-    5. Open the terminal and run the tests 
-        npm run wdio
+## Conclusion
+This project demonstrates my expertise in writing robust functional tests, implementing advanced testing techniques like intercepting network requests and using dynamic data, and ensuring code modularity for maintainability. It underscores my ability to identify and test critical application workflows while leveraging best practices in test automation.
