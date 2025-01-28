@@ -21,18 +21,18 @@ This project focuses on testing the core functionality of the UrbanRoutes app by
 ## How to Run the Tests
 1. Clone the repository to your local system:  
    ```bash
-git clone <repository-url>
+   git clone <repository-url>
 2. Navigate to the project directory:
    ```bash
-cd ./hm08-qa-us
+   cd ./hm08-qa-us
 3. Install the required dependencies:
    ```bash
-npm install webdriverio --save-dev  
-npm install mocha --save-dev  
+   npm install webdriverio --save-dev  
+   npm install mocha --save-dev  
 4. Replace the baseURL in the wdio.config.js file with a current server URL from TripleTen.
 5. Run the test suite:
    ```bash
-npm run wdio
+   npm run wdio
 
 ## Conclusion
 This project demonstrates my expertise in writing robust functional tests, implementing advanced testing techniques like intercepting network requests and using dynamic data, and ensuring code modularity for maintainability. It underscores my ability to identify and test critical application workflows while leveraging best practices in test automation.
