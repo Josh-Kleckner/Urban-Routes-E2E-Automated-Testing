@@ -106,7 +106,6 @@ describe('Create an order', () => {
         // Begin testing for driver info modal
         await browser.pause(30000); //30 second countdown until the driver info modal opens
         const driverInfoModal = await $(page.driverInfoModal);
-    // Is it alright to have multiple expects here since we are checking that all the driver info is showing? Or do we assume if one shows, they all show?
         await expect(driverInfoModal).toBeExisting();
         const driverName = await $(page.driverName);
         await expect(driverName).toBeExisting();
