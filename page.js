@@ -58,10 +58,10 @@ module.exports = {
     },
     submitPhoneNumber: async function(phoneNumber) {
         await this.fillPhoneNumber(phoneNumber);
-        // we are starting interception of request from the moment of method call
+        // starting interception of request from the moment of method call
         await browser.setupInterceptor();
         await $(this.nextButton).click();
-        // we should wait for response
+        // wait for response
         // eslint-disable-next-line wdio/no-pause
         await browser.pause(2000);
         const codeField = await $(this.codeField);
