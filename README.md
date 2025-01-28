@@ -1,4 +1,4 @@
-#Urban Routes End-to-End Automated testing#
+# Urban Routes End-to-End Automated testing
 
 ## Description
 This project focuses on testing the core functionality of the UrbanRoutes app by developing and executing automated tests using WebDriverIO and Mocha. It highlights the use of modern testing tools and techniques to ensure the app delivers a smooth and reliable user experience.
