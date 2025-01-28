@@ -24,7 +24,7 @@ This project focuses on testing the core functionality of the UrbanRoutes app by
    git clone <repository-url>
 2. Navigate to the project directory:
    ```bash
-   cd ./hm08-qa-us
+   cd ./urbanRoutesAutomatedTesting
 3. Install the required dependencies:
    ```bash
    npm install webdriverio --save-dev  
